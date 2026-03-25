@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const api = axios.create({
   baseURL: 'https://vibe-social-frb9.onrender.com/api', // Pointing directly to our express server
-  timeout: 10000
+  timeout: 60000 // Increased to 60s for Render cold starts
 });
 
 // Request interceptor to attach JWT token
