@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #cf95fc;
+  --color-brand-light: #f5d0fe;
+  --color-secondary: #00fff2;
+  --color-accent: #ff6b6b;
+  --color-accent-blue: #0ea5e9;
+  --color-background: #0f0f15;
+  --color-surface: #181820;
+  --color-surface-hover: #22222d;
+  --color-border: #2a2a35;
+  
+  --font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-background);
+    color: #e2e8f0;
+    font-family: var(--font-sans);
+    min-height: 100vh;
+  }
+}
+
+/* Utilities for glassmorphism */
+@layer utilities {
+  .glass-panel {
+    background-color: rgba(24, 24, 32, 0.6);
+    backdrop-filter: blur(12px);
+    border: 1px solid var(--color-border);
+  }
+  
+  .glass-panel-hover {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .glass-panel-hover:hover {
+    background-color: rgba(34, 34, 45, 0.7);
+    border-color: rgba(207, 149, 252, 0.3); /* brand color faint */
+  }
+
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, var(--color-brand), var(--color-secondary));
+  }
+}
