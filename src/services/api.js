@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000/api', // Pointing directly to our express server
+  baseURL: 'https://vibe-social-frb9.onrender.com/api', // Pointing directly to our express server
   timeout: 10000
 });
 
