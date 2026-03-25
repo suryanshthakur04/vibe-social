@@ -120,7 +120,7 @@ const CreateVibe = () => {
        }
 
        const token = localStorage.getItem('token');
-       const res = await fetch('http://localhost:5000/api/posts', {
+       const res = await fetch('https://vibe-social-frb9.onrender.com/api/posts', {
          method: 'POST',
          headers: {
            'Authorization': `Bearer ${token}`

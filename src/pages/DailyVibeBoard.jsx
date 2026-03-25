@@ -381,7 +381,7 @@ const DailyVibeBoard = () => {
                {/* Vivid Background Gradient or Dynamic Uploaded Image */}
                {boardData?.image_url ? (
                  <>
-                   <img src={boardData.image_url.startsWith('http') ? boardData.image_url : `http://localhost:5000${boardData.image_url}`} className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" alt="Vibe Visual Anchor" />
+                   <img src={boardData.image_url.startsWith('http') ? boardData.image_url : `https://vibe-social-frb9.onrender.com${boardData.image_url}`} className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700" alt="Vibe Visual Anchor" />
                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent pointer-events-none"></div>
                  </>
                ) : (

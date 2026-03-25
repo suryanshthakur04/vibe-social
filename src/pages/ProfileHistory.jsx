@@ -34,7 +34,7 @@ const ProfileHistory = () => {
       formData.append('image', file);
       
       const token = localStorage.getItem('token');
-      const res = await fetch('http://localhost:5000/api/auth/profile-photo', {
+      const res = await fetch('https://vibe-social-frb9.onrender.com/api/auth/profile-photo', {
         method: 'PUT',
         headers: { 'Authorization': `Bearer ${token}` },
         body: formData
@@ -174,7 +174,7 @@ const ProfileHistory = () => {
                <div className="w-36 h-36 rounded-full bg-gradient-to-tr from-purple-500 via-pink-400 to-orange-400 p-1 relative z-10 shadow-2xl mx-auto group/avatar cursor-pointer" onClick={() => fileInputRef.current?.click()}>
                  <div className="w-full h-full bg-[#141620] rounded-full overflow-hidden border-4 border-[#141620] relative">
                     <img 
-                      src={user?.profile_photo_url ? `http://localhost:5000${user.profile_photo_url}` : `https://images.unsplash.com/photo-1543610892-0b1f7e6d8ac1?auto=format&fit=crop&q=80&w=400`} 
+                      src={user?.profile_photo_url ? `https://vibe-social-frb9.onrender.com${user.profile_photo_url}` : `https://images.unsplash.com/photo-1543610892-0b1f7e6d8ac1?auto=format&fit=crop&q=80&w=400`} 
                       alt="Profile Avatar" 
                       className="w-full h-full object-cover transition-all group-hover/avatar:opacity-40"
                     />
